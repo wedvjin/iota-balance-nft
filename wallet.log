@@ -1014,3 +1014,93 @@
 2022-12-08 08:48:52 (UTC) iota_client::api::block_builder::input_selection::sender_issuer DEBUG [get_required_addresses_for_sender_and_issuer]
 2022-12-08 08:48:52 (UTC) iota_client::api::block_builder::input_selection::remainder DEBUG [get_storage_deposit_return_outputs]
 2022-12-08 08:48:52 (UTC) iota_client::api::block_builder::input_selection::remainder DEBUG [get_remainder]
+2022-12-09 07:40:21 (UTC) iota_wallet::account_manager::builder      DEBUG [AccountManagerBuilder]
+2022-12-09 07:40:21 (UTC) iota_wallet::storage::manager              DEBUG get_account_manager_data
+2022-12-09 07:40:21 (UTC) iota_wallet::storage::manager              DEBUG get_account_manager_data {"client_options":{"primaryNode":null,"primaryPowNode":null,"nodes":[{"url":"https://api.testnet.shimmer.network/","auth":{"jwt":null,"basic_auth_name_pwd":null},"disabled":false}],"permanodes":null,"ignoreNodeHealth":false,"nodeSyncInterval":{"secs":15,"nanos":0},"quorum":false,"minQuorumSize":3,"quorumThreshold":66,"userAgent":"iota-client/2.0.1-rc.4","protocolParameters":{"protocol_version":2,"network_name":{"inner":"shimmer","bounded":null},"bech32_hrp":{"inner":"smr","bounded":null},"min_pow_score":1500,"below_max_depth":15,"rent_structure":{"v_byte_cost":100,"v_byte_factor_key":10,"v_byte_factor_data":1,"v_byte_offset":380},"token_supply":1813620509061365},"localPow":true,"fallbackToLocalPow":true,"tipsInterval":5,"latestMilestoneTimestamp":null,"apiTimeout":{"secs":15,"nanos":0},"remotePowTimeout":{"secs":100,"nanos":0},"powWorkerCount":null},"coin_type":4219,"storage_options":{"storage_path":"./wallet-db","storage_file_name":null,"storage_encryption_key":null,"manager_store":"Rocksdb"}}
+2022-12-09 07:40:21 (UTC) iota_wallet::storage::manager              DEBUG get_secret_manager {"Stronghold":{"password":null,"timeout":120,"snapshotPath":"wallet.stronghold"}}
+2022-12-09 07:40:21 (UTC) iota_client::node_manager::syncing         DEBUG sync_nodes
+2022-12-09 07:40:21 (UTC) reqwest::connect                           DEBUG starting new connection: https://api.testnet.shimmer.network/
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 181 ms for 200 OK https://api.testnet.shimmer.network/api/core/v2/info
+2022-12-09 07:40:22 (UTC) iota_wallet::account_manager::operations::stronghold_backup DEBUG [restore_backup] loading stronghold backup
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing  DEBUG [SYNC] start syncing with SyncOptions { addresses: [], address_start_index: 0, address_start_index_internal: 0, force_syncing: false, sync_incoming_transactions: false, sync_pending_transactions: true, sync_aliases_and_nfts: true, sync_only_most_basic_outputs: false }
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing  DEBUG [SYNC] last time synced before 1670571622039ms
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::addresses DEBUG [SYNC] get_addresses_to_sync
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing  DEBUG [SYNC] addresses_to_sync 1
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::addresses::output_ids DEBUG [SYNC] start get_output_ids_for_addresses
+2022-12-09 07:40:22 (UTC) reqwest::connect                           DEBUG starting new connection: https://api.testnet.shimmer.network/
+2022-12-09 07:40:22 (UTC) reqwest::connect                           DEBUG starting new connection: https://api.testnet.shimmer.network/
+2022-12-09 07:40:22 (UTC) reqwest::connect                           DEBUG starting new connection: https://api.testnet.shimmer.network/
+2022-12-09 07:40:22 (UTC) reqwest::connect                           DEBUG starting new connection: https://api.testnet.shimmer.network/
+2022-12-09 07:40:22 (UTC) reqwest::connect                           DEBUG starting new connection: https://api.testnet.shimmer.network/
+2022-12-09 07:40:22 (UTC) reqwest::connect                           DEBUG starting new connection: https://api.testnet.shimmer.network/
+2022-12-09 07:40:22 (UTC) reqwest::connect                           DEBUG starting new connection: https://api.testnet.shimmer.network/
+2022-12-09 07:40:22 (UTC) reqwest::connect                           DEBUG starting new connection: https://api.testnet.shimmer.network/
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 191 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/basic?storageDepositReturnAddress=rms1qr449p88cn6yyt0gj0u0z7am085yxje2pvvkvsmvs0pvcxls0kd27jl67w6
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 270 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/nft?address=rms1qr449p88cn6yyt0gj0u0z7am085yxje2pvvkvsmvs0pvcxls0kd27jl67w6
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 281 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/alias?stateController=rms1qr449p88cn6yyt0gj0u0z7am085yxje2pvvkvsmvs0pvcxls0kd27jl67w6
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 303 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/basic?expirationReturnAddress=rms1qr449p88cn6yyt0gj0u0z7am085yxje2pvvkvsmvs0pvcxls0kd27jl67w6
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 306 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/nft?storageDepositReturnAddress=rms1qr449p88cn6yyt0gj0u0z7am085yxje2pvvkvsmvs0pvcxls0kd27jl67w6
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 330 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/nft?expirationReturnAddress=rms1qr449p88cn6yyt0gj0u0z7am085yxje2pvvkvsmvs0pvcxls0kd27jl67w6
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 330 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/basic?address=rms1qr449p88cn6yyt0gj0u0z7am085yxje2pvvkvsmvs0pvcxls0kd27jl67w6
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 338 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/alias?governor=rms1qr449p88cn6yyt0gj0u0z7am085yxje2pvvkvsmvs0pvcxls0kd27jl67w6
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] start get_outputs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] finished get_outputs in 8.62µs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::addresses::output_ids DEBUG [SYNC] spent or not synced outputs: []
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::addresses::output_ids DEBUG [SYNC] finished get_output_ids_for_addresses in 351.94ms
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::addresses::outputs DEBUG [SYNC] start get_outputs_from_address_output_ids
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] start get_outputs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] finished get_outputs in 422.01µs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] convert output_responses
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::addresses::outputs DEBUG [SYNC] finished get_outputs_from_address_output_ids in 7.59ms
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing  DEBUG [SYNC] new_alias_and_nft_addresses: {Nft(NftAddress(0xff8464c8b8904dbb0494bc9fd9fcc1980d8ae47dae6beb563588d4fe3a9e67b6)): Ed25519(Ed25519Address(0xeb5284e7c4f4422de893f8f17bbb79e8434b2a0b1966436c83c2cc1bf07d9aaf)), Nft(NftAddress(0x8a5b30a25f97b51a9d62d0736bab9361b32300dff1a022845a30eab12dab15c1)): Ed25519(Ed25519Address(0xeb5284e7c4f4422de893f8f17bbb79e8434b2a0b1966436c83c2cc1bf07d9aaf))}
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 77 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/basic?address=rms1zrlcgexghzgymwcyjj7flk0ucxvqmzhy0khxh66kxkydfl36nenmv6sph7g
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 90 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/alias?stateController=rms1zrlcgexghzgymwcyjj7flk0ucxvqmzhy0khxh66kxkydfl36nenmv6sph7g
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 100 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/alias?governor=rms1zrlcgexghzgymwcyjj7flk0ucxvqmzhy0khxh66kxkydfl36nenmv6sph7g
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] start get_outputs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] finished get_outputs in 8.56µs
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 119 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/nft?expirationReturnAddress=rms1zrlcgexghzgymwcyjj7flk0ucxvqmzhy0khxh66kxkydfl36nenmv6sph7g
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 124 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/basic?expirationReturnAddress=rms1zrlcgexghzgymwcyjj7flk0ucxvqmzhy0khxh66kxkydfl36nenmv6sph7g
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 125 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/nft?storageDepositReturnAddress=rms1zrlcgexghzgymwcyjj7flk0ucxvqmzhy0khxh66kxkydfl36nenmv6sph7g
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 128 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/nft?address=rms1zrlcgexghzgymwcyjj7flk0ucxvqmzhy0khxh66kxkydfl36nenmv6sph7g
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 127 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/basic?storageDepositReturnAddress=rms1zrlcgexghzgymwcyjj7flk0ucxvqmzhy0khxh66kxkydfl36nenmv6sph7g
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] start get_outputs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] finished get_outputs in 6.82µs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] convert output_responses
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 86 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/alias?stateController=rms1zz99kv9zt7tm2x5avtg8x6atjdsmxgcqmlc6qg5ytgcw4vfd4v2uz0xm35l
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 96 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/basic?expirationReturnAddress=rms1zz99kv9zt7tm2x5avtg8x6atjdsmxgcqmlc6qg5ytgcw4vfd4v2uz0xm35l
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 99 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/nft?expirationReturnAddress=rms1zz99kv9zt7tm2x5avtg8x6atjdsmxgcqmlc6qg5ytgcw4vfd4v2uz0xm35l
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 166 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/basic?storageDepositReturnAddress=rms1zz99kv9zt7tm2x5avtg8x6atjdsmxgcqmlc6qg5ytgcw4vfd4v2uz0xm35l
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 178 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/basic?address=rms1zz99kv9zt7tm2x5avtg8x6atjdsmxgcqmlc6qg5ytgcw4vfd4v2uz0xm35l
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 178 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/nft?address=rms1zz99kv9zt7tm2x5avtg8x6atjdsmxgcqmlc6qg5ytgcw4vfd4v2uz0xm35l
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 180 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/nft?storageDepositReturnAddress=rms1zz99kv9zt7tm2x5avtg8x6atjdsmxgcqmlc6qg5ytgcw4vfd4v2uz0xm35l
+2022-12-09 07:40:22 (UTC) iota_client::node_manager::http_client     DEBUG GET: 180 ms for 200 OK https://api.testnet.shimmer.network/api/indexer/v1/outputs/alias?governor=rms1zz99kv9zt7tm2x5avtg8x6atjdsmxgcqmlc6qg5ytgcw4vfd4v2uz0xm35l
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] start get_outputs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] finished get_outputs in 23.53µs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] start get_outputs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] finished get_outputs in 4.52µs
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::outputs DEBUG [SYNC] convert output_responses
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing  DEBUG [SYNC] new_alias_and_nft_addresses: {}
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing  DEBUG [SYNC] spent_or_not_synced_outputs: []
+2022-12-09 07:40:22 (UTC) iota_wallet::account::update               DEBUG [SYNC] Update account with new synced transactions
+2022-12-09 07:40:22 (UTC) iota_wallet::account::update               DEBUG [SYNC] storing account Wallet 1 with new synced data
+2022-12-09 07:40:22 (UTC) iota_wallet::account::handle               DEBUG [save] saving account to database
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing::transactions DEBUG [SYNC] sync pending transactions
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::balance  DEBUG [BALANCE] get balance
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::output_claiming DEBUG [OUTPUT_CLAIMING] get_unlockable_outputs_with_additional_unlock_conditions
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::output_claiming DEBUG [OUTPUT_CLAIMING] available outputs to claim: 0
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::balance  DEBUG [BALANCE] locked outputs: {}
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::balance  DEBUG [BALANCE] total_amount: 499707700, locked balance: 0
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::syncing  DEBUG [SYNC] finished syncing in 684.44ms
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::balance  DEBUG [BALANCE] get balance
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::output_claiming DEBUG [OUTPUT_CLAIMING] get_unlockable_outputs_with_additional_unlock_conditions
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::output_claiming DEBUG [OUTPUT_CLAIMING] available outputs to claim: 0
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::balance  DEBUG [BALANCE] locked outputs: {}
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::balance  DEBUG [BALANCE] total_amount: 499707700, locked balance: 0
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::transaction::high_level::minting::mint_nfts DEBUG [TRANSACTION] prepare_mint_nfts
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::transaction::prepare_transaction DEBUG [TRANSACTION] prepare_transaction
+2022-12-09 07:40:22 (UTC) iota_wallet::account::operations::transaction::input_selection DEBUG [TRANSACTION] select_inputs
+2022-12-09 07:40:22 (UTC) iota_client::api::block_builder::input_selection DEBUG [try_select_inputs]
+2022-12-09 07:40:22 (UTC) iota_client::api::block_builder::input_selection::sender_issuer DEBUG [select_inputs_for_sender_and_issuer]
+2022-12-09 07:40:22 (UTC) iota_client::api::block_builder::input_selection::sender_issuer DEBUG [get_required_addresses_for_sender_and_issuer]
+2022-12-09 07:40:22 (UTC) iota_client::api::block_builder::input_selection::remainder DEBUG [get_storage_deposit_return_outputs]
+2022-12-09 07:40:22 (UTC) iota_client::api::block_builder::input_selection::remainder DEBUG [get_remainder]

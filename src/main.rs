@@ -67,7 +67,10 @@ async fn main() -> Result<()> {
         immutable_metadata: Some(b"some NFT immutable metadata".to_vec()),
     }];
     let transaction = account_handle.mint_nfts(nft_options, None).await.unwrap();
-
+    account_handle
+        .retry_transaction_until_included(&transaction.transaction_id, None, None)
+        .await
+        .unwrap();
     println!("{:?}", transaction);
     
     account_handle.sync(None).await?;
@@ -82,6 +85,10 @@ async fn main() -> Result<()> {
     }];
     let transaction = account_handle.mint_nfts(nft_options, None).await.unwrap();
     //error
+    account_handle
+        .retry_transaction_until_included(&transaction.transaction_id, None, None)
+        .await
+        .unwrap();
     println!("{:?}", transaction);
     account_handle.sync(None).await?;
 
